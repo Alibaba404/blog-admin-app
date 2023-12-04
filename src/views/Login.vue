@@ -32,8 +32,8 @@ export default {
     return {
       logining: false,
       ruleForm: {
-        account: "东邪",
-        password: "123456",
+        account: "",
+        password: "",
       },
       rules: {
         account: [
@@ -74,7 +74,7 @@ export default {
                 localStorage.setItem("logininfo", JSON.stringify(jwtToken.payload.logininfo));
                 localStorage.setItem("U-TOKEN", token);
                 this.$router.push({ path: "/echarts" });
-                // 刷新本地路由 
+                // 刷新本地路由
                 location.reload();
               }
             } else {
